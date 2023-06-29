@@ -1,6 +1,8 @@
 """
 Task #1
 Multiple 3 and 5
+Level: Easy
+Points: 100
 """
 
 

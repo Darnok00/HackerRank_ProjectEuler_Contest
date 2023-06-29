@@ -1,6 +1,8 @@
 """
 Task #2
 Even Fibonacci numbers
+Level: Easy
+Points: 100
 """
 
 
