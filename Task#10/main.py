@@ -1,12 +1,12 @@
-"""
-Task #7
-10001st prime
-Level: Easy
+"""""
+Task #10
+Summation of primes
+Level: Medium
 Points: 100
 """
-# This constant is determined experimentally,
-# in order to find the optimal sieve size that will return at least 10^4 prime numbers
-SIZE_SIEVE = 110000
+
+
+SIZE = 1000000
 
 
 def print_result(result):
@@ -17,26 +17,35 @@ def print_result(result):
 def prime_eratosthenes(n):
     prime = [True for _ in range(n + 1)]
     p = 2
+
     while p * p <= n:
         if prime[p]:
             for i in range(p * p, n + 1, p):
                 prime[i] = False
         p += 1
 
-    return [i for i, n in enumerate(prime) if n][2:]
+    return prime
 
 
-def find_prime(t):
+def find_sum_primes(t):
     output_array = []
-    primes = prime_eratosthenes(SIZE_SIEVE)
+    primes = prime_eratosthenes(SIZE)
+    dict_sum = {}
+    act_sum = 0
+
+    for i in range(2, SIZE):
+        if primes[i]:
+            act_sum += i
+        dict_sum[i] = act_sum
 
     for _ in range(t):
         n = int(input().strip())
-        output_array.append(primes[n-1])
+        sum_primes = dict_sum[n]
+        output_array.append(sum_primes)
 
     return output_array
 
 
 t = int(input().strip())
-result = find_prime(t)
+result = find_sum_primes(t)
 print_result(result)

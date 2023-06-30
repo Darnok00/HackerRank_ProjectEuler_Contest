@@ -6,6 +6,12 @@ Points: 100
 """
 
 
+def print_result(result):
+    for element in result:
+        print(element)
+
+
+
 def computeGCD(x, y):
     while y:
         x, y = y, x % y
@@ -27,11 +33,6 @@ def computeLCM(t):
             output_array.append(lcm)
 
     return output_array
-
-
-def print_result(result):
-    for element in result:
-        print(element)
 
 
 t = int(input().strip())

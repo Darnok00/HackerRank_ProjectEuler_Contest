@@ -6,6 +6,11 @@ Points: 100
 """
 
 
+def print_result(result):
+    for element in result:
+        print(element)
+
+
 def generate_palindromes(boundary):
     palindromes = []
 
@@ -37,11 +42,6 @@ def find_largest_product(t):
                 break
 
     return output_array
-
-
-def print_result(result):
-    for element in result:
-        print(element)
 
 
 t = int(input().strip())

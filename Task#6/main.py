@@ -6,6 +6,11 @@ Points: 100
 """
 
 
+def print_result(result):
+    for element in result:
+        print(element)
+
+
 def find_difference(t):
     output_array = []
 
@@ -16,11 +21,6 @@ def find_difference(t):
         output_array.append(abs(sum_squares - square_sum))
 
     return output_array
-
-
-def print_result(result):
-    for element in result:
-        print(element)
 
 
 t = int(input().strip())

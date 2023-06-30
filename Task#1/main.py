@@ -6,6 +6,11 @@ Points: 100
 """
 
 
+def print_result(result):
+    for element in result:
+        print(element)
+
+
 def sum_arithmetic_seq(n, a1, r):
     return (n * (2 * a1 + (n - 1) * r)) // 2
 
@@ -27,11 +32,6 @@ def multiple3and5(t):
         output_array.append(result)
 
     return output_array
-
-
-def print_result(result):
-    for element in result:
-        print(element)
 
 
 t = int(input().strip())

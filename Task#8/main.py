@@ -7,6 +7,11 @@ Points: 100
 import math
 
 
+def print_result(result):
+    for element in result:
+        print(element)
+
+
 def find_largest_product(t):
     output_array = []
 
@@ -23,11 +28,6 @@ def find_largest_product(t):
         output_array.append(max_product)
 
     return output_array
-
-
-def print_result(result):
-    for element in result:
-        print(element)
 
 
 t = int(input().strip())
