@@ -1,5 +1,5 @@
 """""
-Task #12
+Task#12
 Highly divisible triangular number
 Level: Easy
 Points: 100
