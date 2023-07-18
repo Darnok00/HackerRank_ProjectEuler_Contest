@@ -4,6 +4,7 @@ Power digit sum
 Level: Easy
 Points: 100
 */
+export {};
 
 const N: number = 10000;
 
