@@ -6,7 +6,7 @@ Points: 100
 */
 export {};
 
-const DICT_NUMBER_TO_WORDS: {[index: number]: string } = {
+const dictNumberToWords: {[index: number]: string } = {
   0: "",
   1: " One", 
   2: " Two",
@@ -51,18 +51,18 @@ function createWord(n: number) {
     let act_n: number = n % 1000
 
     if (act_n > 100) {
-      new_word += (DICT_NUMBER_TO_WORDS[Math.floor(act_n / 100)] +  DICT_NUMBER_TO_WORDS[100])
+      new_word += (dictNumberToWords[Math.floor(act_n / 100)] +  dictNumberToWords[100])
       act_n = act_n % 100
     }
 
     if ( Math.floor(act_n / 10) != 1 ) {
-      new_word += (DICT_NUMBER_TO_WORDS[Math.floor(act_n / 10) * 10] + DICT_NUMBER_TO_WORDS[act_n%10])
+      new_word += (dictNumberToWords[Math.floor(act_n / 10) * 10] + dictNumberToWords[act_n%10])
     } else {
-      new_word += DICT_NUMBER_TO_WORDS[act_n]
+      new_word += dictNumberToWords[act_n]
     }
 
     if (big_number != 1 && new_word != "") {
-      new_word += DICT_NUMBER_TO_WORDS[big_number]
+      new_word += dictNumberToWords[big_number]
     }
 
     big_number *= 1000;
