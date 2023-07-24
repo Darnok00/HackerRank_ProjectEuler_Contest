@@ -1,4 +1,11 @@
-'use strict';
+/*
+Task #18
+Maximum Path Sum I
+Level: Easy
+Points: 100
+*/
+
+export{}
 
 process.stdin.resume();
 process.stdin.setEncoding('utf-8');
